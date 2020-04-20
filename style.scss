@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+// Primary 
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+// Neutral
+
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $VeryLightGray;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+main {
+    padding-top: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.hero {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $VeryDarkBlue;
+        padding-bottom: 1em;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: $VeryDarkBlue;
+    }
+
+    .hero-desc {
+        margin: 0 auto;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $GrayishBlue;
+        width: 75%;
+    }
+}
+
+.card-container {
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    .card {
+        background: #fff;
+        margin: 2em auto;
+        width: 70%;
+        position: relative;
+        border-radius: 5px;
+        border-top: $cyan 3px solid;
+        box-shadow: 0 4px 8px 0 rgba(212, 225, 255, 0.2), 0 6px 20px 0 rgba(34, 48, 126, 0.2);
+
+        .card-desc {
+            height: 10em;
+            padding: 2em 2em 3em;
+
+            h3 {
+                color: $VeryDarkBlue;
+                padding-bottom: .3em;
+            }
+
+            p {
+                color: $GrayishBlue;
+                font-size: .9rem;
+            }
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 2em;
+        }
+        &:nth-last-child(2) {
+            border-top: $red 3px solid;
+        }
+
+        &:nth-child(2) {
+            border-top: $orange 3px solid;
+        }
+
+        &:nth-child(3) {
+            border-top: $blue 3px solid;
+        }
+        
+    }
+    
+}
+
+@media (min-width:900px) {
+    main {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .hero {
+        .hero-desc {
+            width: 60%;
+        }
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .card {
+            width: 90%;
+            &:nth-of-type(1) {
+                align-self: center;
+            }
+            &:nth-of-type(2) {
+                align-self: center;
+            }
+        }
+    }
+}
