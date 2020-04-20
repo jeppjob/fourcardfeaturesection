@@ -114,6 +114,12 @@ main {
     padding-left: 5em;
     padding-right: 5em;
   }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 2.1rem;
+  }
   .hero .hero-desc {
     width: 60%;
   }
